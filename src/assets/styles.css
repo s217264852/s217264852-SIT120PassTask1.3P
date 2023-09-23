@@ -1,0 +1,80 @@
+/*Using colours similar to my previous website for consistency so all my web apps are consistent*/
+body {
+    font-family: Arial, sans-serif;
+    color: #17252A;
+    background-color: #3AAFA9;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to go to the next row on small screens */
+    justify-content: space-between;
+    padding: 5%;
+    gap: 20px; /* For a gap between columns */
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #DEF2F1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    min-width: 300px; /* The minimum width for columns */
+    max-width: calc(33.33% - 20px); /* Limit column width on larger screens */
+}
+
+.column:hover {
+    transform: scale(1.05);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #3AAFA9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2A7E7E;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Media query applied for small screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ensures columns are stacked vertically for small screens */
+        align-items: center; /* Centers columns horizontally */
+    }
+
+    .column {
+        max-width: 100%;
+    }
+}
